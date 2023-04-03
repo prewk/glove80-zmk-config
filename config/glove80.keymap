@@ -23,9 +23,9 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define _SNGLQU &kp NUHS // '
+#define snglqu &kp NUHS // '
+#define doblqu &mt LSHIFT N2 // "
 
-// #define _DOBLQU S(KC_2) // "
 // #define _BCKTIC S(KC_EQL) // `
 // #define _APOSTR KC_EQL // ´
 // #define _MULTIP S(KC_NUHS) // *
@@ -70,6 +70,15 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 1>, <&to 1>;
+        };
+    };
+
+    macros {
+        bcktk: backtick {
+            label = "BACKTICK";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp EQUAL>, <&macro_release &kp LSHFT>;
         };
     };
 
@@ -174,7 +183,7 @@
         base_layer {
             bindings = <
      &kp F1    &kp F2   &kp F3    &kp F4     &kp F5                                                                                  &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
-  _SNGLQU      &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                                  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
+   &bcktk      &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                                  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
     &kp TAB     &kp Q    &kp W     &kp E      &kp R   &kp T                                                                   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
     &kp ESC     &kp A    &kp S     &kp D      &kp F   &kp G                                                                   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
   &kp GRAVE     &kp Z    &kp X     &kp C      &kp V   &kp B  &kp LSHFT  &kp LCTRL    &lower  &kp LGUI  &kp RCTRL  &kp RSHFT   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp PG_UP
