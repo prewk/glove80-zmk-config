@@ -23,41 +23,38 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define snglqu &kp NUHS // '
-#define doblqu &mt LSHIFT N2 // "
-
-// #define _BCKTIC S(KC_EQL) // `
-// #define _APOSTR KC_EQL // ´
-// #define _MULTIP S(KC_NUHS) // *
-// #define _2_DOTS KC_RBRC // ¨
-// #define _SV_AU_ KC_LBRC // Å
-// #define _SV_AE_ KC_QUOT // Ä
-// #define _SV_OE_ KC_SCLN // Ö
-// #define _ANGULL KC_GRV  // <
-// #define _ANGULR S(KC_GRV) // >
-// #define _SQUARL A(KC_8) // [
-// #define _SQUARR A(KC_9) // ]
-// #define _PARENL S(KC_8) // (
-// #define _PARENR S(KC_9) // )
-// #define _CURLYL S(A(KC_8)) // {
-// #define _CURLYR S(A(KC_9)) // }
-// #define _PLUS__ KC_MINS // +
-// #define _DASH__ KC_SLSH // -
-// #define _ATSIGN   A(KC_2) // @
-// #define _DOLLAR A(KC_4) // $
-// #define _FSLASH S(KC_7) // /
-// #define _PIPE__ A(KC_7) // |
-// #define _BSLASH S(A(KC_7)) // Backslash
-// #define _WORD_L A(KC_LEFT) // <<
-// #define _WORD_R A(KC_RIGHT) // >>
-// #define _TILDE_ A(KC_RBRC) // ~
-// #define _EQUALS S(KC_0) // =
-// #define _QUESTI S(KC_MINS) // ?
-// #define _COLON_ S(KC_DOT) // :
-// #define _PARAGR KC_NUBS // §
-// #define _PERC S(KC_5) // %
-// #define _AMP S(KC_6) // &
-
+#define _SNGQU &kp NUHS // '
+#define _DBLQU &mt LSHIFT N2 // "
+#define _APOST &kp EQUAL // ´
+#define _MULTI &kp LSHIFT NUHS // *
+#define _2DOTS &kp RBKT // ¨
+#define _SV_AU &kp LBKT // Å
+#define _SV_AE &kp SQT // Ä
+#define _SV_OE &kp SEMI // Ö
+#define _ANG_L &kp GRAVE // <
+#define _ANG_R &kp LSHIFT GRAVE // >
+#define _SQR_L &kp LALT N8 // [
+#define _SQR_R &kp LALT N9 // ]
+#define _PAR_L &kp LSHIFT N8 // (
+#define _PAR_R &kp LSHIFT N9 // (
+#define _CRL_L &kp LSHIFT LALT N8 // {
+#define _CRL_R &kp LSHIFT LALT N9 // }
+#define _PLUS  &kp MINUS // +
+#define _DASH  &kp SLASH // -
+#define _AT    &kp LALT N2 // @
+#define _DOLLR &kp LALT N4 // $
+#define _FSLSH &kp LSHIFT N7 // /
+#define _PIPE  &kp LALT N7 // /
+#define _BSLSH &kp LSHIFT LALT N7 // \
+#define _WRD_L &kp LALT LEFT // <<
+#define _WRD_R &kp LALT RIGHT // >>
+#define _TILDE &kp LALT RBKT // ~
+#define _EQUAL &kp LSHIFT N0 // =
+#define _QUEST &kp LSHIFT MINUS // ?
+#define _COLON &kp LSHIFT DOT // :
+#define _PARAG &kp NUBS // §
+#define _PERCN &kp LSHIFT N5 // %
+#define _AMPER &kp LSHIFT N6 // &
 
 / {
     /* Glove80 system behavior & macros */
