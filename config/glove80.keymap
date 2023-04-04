@@ -23,50 +23,51 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define _SNGQU &kp NUHS // '
-#define _DBLQU &mt LSHIFT N2 // "
-#define _APOST &kp EQUAL // ´
-#define _MULTI &kp LSHIFT NUHS // *
-#define _2DOTS &kp RBKT // ¨
-#define _SV_AU &kp LBKT // Å
-#define _SV_AE &kp SQT // Ä
-#define _SV_OE &kp SEMI // Ö
+// TODO: No spacies
+#define _SNGQU NUHS // '
+// #define _DBLQU &mt LSHIFT N2 // "
+#define _APOST EQUAL // ´
+#define _MULTI LSHIFT NUHS // *
+#define _2DOTS RBKT // ¨
+#define _SV_AU LBKT // Å
+#define _SV_AE SQT // Ä
+#define _SV_OE SEMI // Ö
 #define _ANG_L GRAVE // <
-#define _ANG_R &kp LSHIFT GRAVE // >
-#define _SQR_L &kp LALT N8 // [
-#define _SQR_R &kp LALT N9 // ]
-#define _PAR_L &kp LSHIFT N8 // (
-#define _PAR_R &kp LSHIFT N9 // (
-#define _CRL_L &kp LSHIFT LALT N8 // {
-#define _CRL_R &kp LSHIFT LALT N9 // }
-#define _PLUS  &kp MINUS // +
-#define _DASH  &kp SLASH // -
-#define _AT    &kp LALT N2 // @
-#define _DOLLR &kp LALT N4 // $
-#define _FSLSH &kp LSHIFT N7 // /
-#define _PIPE  &kp LALT N7 // /
-#define _BSLSH &kp LSHIFT LALT N7 // \
-#define _WRD_L &kp LALT LEFT // <<
-#define _WRD_R &kp LALT RIGHT // >>
-#define _TILDE &kp LALT RBKT // ~
-#define _EQUAL &kp LSHIFT N0 // =
-#define _QUEST &kp LSHIFT MINUS // ?
-#define _COLON &kp LSHIFT DOT // :
-#define _PARAG &kp NUBS // §
-#define _PERCN &kp LSHIFT N5 // %
-#define _AMPER &kp LSHIFT N6 // &
+#define _ANG_R LSHIFT GRAVE // >
+#define _SQR_L LALT N8 // [
+#define _SQR_R LALT N9 // ]
+#define _PAR_L LSHIFT N8 // (
+#define _PAR_R LSHIFT N9 // (
+#define _CRL_L LSHIFT LALT N8 // {
+#define _CRL_R LSHIFT LALT N9 // }
+#define _PLUS  MINUS // +
+#define _DASH  SLASH // -
+#define _AT    LALT N2 // @
+#define _DOLLR LALT N4 // $
+#define _FSLSH LSHIFT N7 // /
+#define _PIPE  LALT N7 // /
+#define _BSLSH LSHIFT LALT N7 // \
+#define _WRD_L LALT LEFT // <<
+#define _WRD_R LALT RIGHT // >>
+#define _TILDE LALT RBKT // ~
+#define _EQUAL LSHIFT N0 // =
+#define _QUEST LSHIFT MINUS // ?
+#define _COLON LSHIFT DOT // :
+#define _PARAG NUBS // §
+#define _PERCN LSHIFT N5 // %
+#define _AMPER LSHIFT N6 // &
 
-#define _LSHDN &mt LSHIFT DOWN // Hold: Left shift, Tap: Down
-#define _RSHUP &mt RSHIFT UP // Hold: Right shift, Tap: Up
+// #define _LSHDN &mt LSHIFT DOWN // Hold: Left shift, Tap: Down
+// #define _RSHUP &mt RSHIFT UP // Hold: Right shift, Tap: Up
 
 #define L_QWERTY 0
 #define L_SYMB   1
 #define L_NAV    2
 #define L_NUM    3
 
-#define _SYMB &mo L_SYMB // Hold: SYMB
-#define _SP_NAV &lt L_NAV SPACE // Hold: NAV, Tap: Space
-#define _E_SYMB &lt L_SYMB ENTER // Hold: SYMB, Tap: Enter
+// #define _SYMB &mo L_SYMB // Hold: SYMB
+// #define _SP_NAV &lt L_NAV SPACE // Hold: NAV, Tap: Space
+// #define _E_SYMB &lt L_SYMB ENTER // Hold: SYMB, Tap: Enter
 
 / {
     /* Glove80 system behavior & macros */
@@ -189,25 +190,14 @@
     */
 
 
-   //      base_layer {
-   //          bindings = <
-   //   &kp F1    &kp F2   &kp F3    &kp F4     &kp F5                                                                               &kp F6     &kp F7    &kp F8    &kp F9     &kp F10
-   // &bcktk      &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                               &kp N6  &kp N7     &kp N8    &kp N9    &kp N0     &kp _PLUS
-   //  &kp TAB     &kp Q    &kp W     &kp E      &kp R   &kp T                                                               &kp Y   &kp U      &kp I     &kp O     &kp P      &kp _SV_AE
-   //  &kp ESC     &kp A    &kp S     &kp D      &kp F   &kp G                                                               &kp H   &kp J      &kp K     &kp L     &kp _SV_OE &kp _SV_AE
-   //  &kp LSHIFT  &kp Z    &kp X     &kp C      &kp V   &kp B  _SYMB    _PAR_L   _CRL_L     _CRL_R    _PAR_R   &kp BSPC     &kp N   &kp M      &kp COMMA  &kp DOT  &kp _DASH  &kp RSHIFT
-   //  &none       &none    &kp LCTRL _ANG_L     _ANG_R         _SP_NAV  &kp LALT &kp LGUI   &kp RGUI  &kp LALT  _E_SYMB             &kp DEL    &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT
-   //          >;
-   //      };
-
         base_layer {
             bindings = <
-     &kp F1    &kp F2   &kp F3    &kp F4     &kp F5                                                                                  &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
-   &bcktk      &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                                  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-    &kp TAB     &kp Q    &kp W     &kp E      &kp R   &kp T                                                                   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
-    &kp ESC     &kp A    &kp S     &kp D      &kp F   &kp G                                                                   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
-  &kp GRAVE     &kp Z    &kp X     &kp C      &kp V   &kp B  &kp LSHFT  &kp LCTRL    &lower  &kp LGUI  &kp RCTRL  &kp RSHFT   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp PG_UP
- &magic 2 0  &kp HOME  &kp END  &kp _ANG_L  &kp RIGHT           &kp BSPC    &kp DEL  &kp LALT  &kp RALT    &kp RET  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+     &kp F1    &kp F2   &kp F3    &kp F4     &kp F5                                                                                                 &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
+   &bcktk      &kp N1   &kp N2    &kp N3     &kp N4     &kp N5                                                                                      &kp N6  &kp N7     &kp N8    &kp N9    &kp N0     &kp _PLUS
+    &kp TAB     &kp Q    &kp W     &kp E      &kp R      &kp T                                                                                      &kp Y   &kp U      &kp I     &kp O     &kp P      &kp _SV_AE
+    &kp ESC     &kp A    &kp S     &kp D      &kp F      &kp G                                                                                      &kp H   &kp J      &kp K     &kp L     &kp _SV_OE &kp _SV_AE
+    &kp LSHIFT  &kp Z    &kp X     &kp C      &kp V      &kp B   &mo L_SYMB       &kp _PAR_L   &kp _CRL_L  &kp _CRL_R &kp _PAR_R   &kp BSPC         &kp N   &kp M      &kp COMMA &kp DOT   &kp _DASH  &kp RSHIFT
+    &none       &none    &kp LCTRL &kp _ANG_L &kp _ANG_R         &lt L_NAV SPACE  &kp LALT     &kp LGUI    &kp RGUI   &kp LALT     &lt L_SYMB ENTER         &kp DEL    &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT
             >;
         };
 
