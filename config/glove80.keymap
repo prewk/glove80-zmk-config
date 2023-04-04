@@ -207,8 +207,8 @@
             bindings = <
  &trans  &trans &trans &trans &trans                                                                 &trans       &trans    &trans    &trans        &trans
  &trans  &trans &trans &trans &trans &trans                                                  &trans  &trans       &trans    &trans    &trans        &trans
- &trans  &trans &trans &trans &trans &trans                                                  &trans  &kp la(left) &kp pg_dn &kp pg_up &kp la(right) &trans
- &trans  &trans &trans &trans &trans &trans                                                  &trans  &kp left     &kp down  &kp up    &kp right     &trans
+ &trans  &trans &trans &trans &trans &trans                                                  &trans  &kp la(LEFT) &kp PG_DN &kp PG_UP &kp la(RIGHT) &trans
+ &trans  &trans &trans &trans &trans &trans                                                  &trans  &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT     &trans
  &trans  &trans &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans    &trans    &trans        &trans
  &trans  &trans &trans &trans &trans         &trans  &trans  &trans  &trans  &trans  &trans          &trans       &trans    &trans    &trans        &trans
             >;
