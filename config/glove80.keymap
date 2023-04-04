@@ -57,7 +57,7 @@
 #define _PERCN LS(N5) // %
 #define _AMPER LS(N6) // &
 
-#define _QUAKE LC(NUBS)
+#define _QUAKE LG(NUBS)
 
 #define L_QWERTY 0
 #define L_SYMB   1
@@ -244,7 +244,7 @@
 
         layer_num {
             bindings = <
- &kp _QUAKE  &trans &trans &trans &trans                                                                    &trans &trans &trans &trans &trans
+ &trans  &trans &trans &trans &trans                                                                    &trans &trans &trans &trans &trans
  &trans      &trans &trans &trans &trans &trans                                                     &trans  &trans &trans &trans &trans &trans
  &trans      &trans &trans &trans &trans &trans                                                     &trans  &trans &trans &trans &trans &trans
  &trans      &trans &trans &trans &trans &trans                                                     &trans  &trans &trans &trans &trans &trans
