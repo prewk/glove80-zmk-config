@@ -25,37 +25,37 @@
 
 // TODO: No spacies
 #define _SNGQU NUHS // '
-// #define _DBLQU &mt LSHIFT N2 // "
+// #define _DBLQU &mt LS(N2) // "
 #define _APOST EQUAL // ´
-#define _MULTI LSHIFT NUHS // *
+#define _MULTI LS(NUHS) // *
 #define _2DOTS RBKT // ¨
 #define _SV_AU LBKT // Å
 #define _SV_AE SQT // Ä
 #define _SV_OE SEMI // Ö
 #define _ANG_L GRAVE // <
-#define _ANG_R LSHIFT GRAVE // >
-#define _SQR_L LALT N8 // [
-#define _SQR_R LALT N9 // ]
-#define _PAR_L LSHIFT N8 // (
-#define _PAR_R LSHIFT N9 // (
-#define _CRL_L LSHIFT LALT N8 // {
-#define _CRL_R LSHIFT LALT N9 // }
+#define _ANG_R LS(GRAVE) // >
+#define _SQR_L LA(N8) // [
+#define _SQR_R LA(N9) // ]
+#define _PAR_L LS(N8) // (
+#define _PAR_R LS(N9) // )
+#define _CRL_L LS(LALT N8) // {
+#define _CRL_R LS(LALT N9) // }
 #define _PLUS  MINUS // +
 #define _DASH  SLASH // -
-#define _AT    LALT N2 // @
-#define _DOLLR LALT N4 // $
-#define _FSLSH LSHIFT N7 // /
-#define _PIPE  LALT N7 // /
-#define _BSLSH LSHIFT LALT N7 // \
-#define _WRD_L LALT LEFT // <<
-#define _WRD_R LALT RIGHT // >>
-#define _TILDE LALT RBKT // ~
-#define _EQUAL LSHIFT N0 // =
-#define _QUEST LSHIFT MINUS // ?
-#define _COLON LSHIFT DOT // :
+#define _AT    LA(N2) // @
+#define _DOLLR LA(N4) // $
+#define _FSLSH LS(N7) // /
+#define _PIPE  LA(N7) // /
+#define _BSLSH LS(LA(N7)) // \
+#define _WRD_L LA(LEFT) // <<
+#define _WRD_R LA(RIGHT) // >>
+#define _TILDE LA(RBKT) // ~
+#define _EQUAL LS(N0) // =
+#define _QUEST LS(MINUS) // ?
+#define _COLON LS(DOT) // :
 #define _PARAG NUBS // §
-#define _PERCN LSHIFT N5 // %
-#define _AMPER LSHIFT N6 // &
+#define _PERCN LS(N5) // %
+#define _AMPER LS(N6) // &
 
 // #define _LSHDN &mt LSHIFT DOWN // Hold: Left shift, Tap: Down
 // #define _RSHUP &mt RSHIFT UP // Hold: Right shift, Tap: Up
