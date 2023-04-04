@@ -39,7 +39,7 @@
 #define _PAR_L LS(N8) // (
 #define _PAR_R LS(N9) // )
 #define _CRL_L LS(LA(N8)) // {
-#define _CRL_R LS(LA((N9) // }
+#define _CRL_R LS(LA(N9)) // }
 #define _PLUS  MINUS // +
 #define _DASH  SLASH // -
 #define _AT    LA(N2) // @
