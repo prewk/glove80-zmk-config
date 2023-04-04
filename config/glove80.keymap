@@ -88,7 +88,26 @@
             label = "BACKTICK";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp EQUAL>, <&macro_release &kp LSHFT>;
+            bindings =
+                <&macro_press &kp LSHFT>,
+                <&macro_tap &kp EQUAL>,
+                <&macro_release &kp LSHFT>,
+                <&macro_tap &kp SPACE>;
+        };
+    };
+
+    macros {
+        bcktk3: triple_backtick {
+            label = "TRIPLE_BACKTICK";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LSHFT>,
+                <&macro_tap &kp EQUAL>,
+                <&macro_tap &kp EQUAL>,
+                <&macro_tap &kp EQUAL>,
+                <&macro_release &kp LSHFT>,
+                <&macro_tap &kp SPACE>;
         };
     };
 
@@ -231,12 +250,12 @@
 
         layer_symb {
             bindings = <
- &trans  &trans &trans &trans &trans                                                                 &trans &trans &trans &trans &trans
- &trans  &trans &trans &trans &trans &trans                                                  &trans  &trans &trans &trans &trans &trans
- &trans  &trans &trans &trans &trans &trans                                                  &trans  &trans &trans &trans &trans &trans
- &trans  &trans &trans &trans &trans &trans                                                  &trans  &trans &trans &trans &trans &trans
- &trans  &trans &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans
- &trans  &trans &trans &trans &trans         &trans  &trans  &trans  &trans  &trans  &trans          &trans &trans &trans &trans &trans
+ &trans  &trans  &trans &trans &trans                                                                 &trans &trans &trans &trans &trans
+ &bcktk  &bcktk3 &trans &trans &trans &trans                                                  &trans  &trans &trans &trans &trans &trans
+ &trans  &trans  &trans &trans &trans &trans                                                  &trans  &trans &trans &trans &trans &trans
+ &trans  &trans  &trans &trans &trans &trans                                                  &trans  &trans &trans &trans &trans &trans
+ &trans  &trans  &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans &trans &trans
+ &trans  &trans  &trans &trans &trans         &trans  &trans  &trans  &trans  &trans  &trans          &trans &trans &trans &trans &trans
             >;
         };
 
