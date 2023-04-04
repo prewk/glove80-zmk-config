@@ -207,7 +207,7 @@
             bindings = <
  &trans  &trans &trans &trans &trans                                                                 &trans     &trans    &trans    &trans     &trans
  &trans  &trans &trans &trans &trans &trans                                                  &trans  &trans     &trans    &trans    &trans     &trans
- &trans  &trans &trans &trans &trans &trans                                                  &trans  &kp _WRD_L &kp PG_DN &kp PG_UP &kp _WRD_R &trans
+ &trans  &trans &trans &trans &trans &trans                                                  &trans  &trans &kp PG_DN &kp PG_UP &trans &trans
  &trans  &trans &trans &trans &trans &trans                                                  &trans  &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &trans
  &trans  &trans &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans     &trans
  &trans  &trans &trans &trans &trans         &trans  &trans  &trans  &trans  &trans  &trans          &trans     &trans    &trans    &trans     &trans
@@ -244,7 +244,7 @@
 
         layer_num {
             bindings = <
- &trans  &trans &trans &trans &trans                                                                    &trans &trans &trans &trans &trans
+ &kp _QUAKE  &trans &trans &trans &trans                                                                    &trans &trans &trans &trans &trans
  &trans      &trans &trans &trans &trans &trans                                                     &trans  &trans &trans &trans &trans &trans
  &trans      &trans &trans &trans &trans &trans                                                     &trans  &trans &trans &trans &trans &trans
  &trans      &trans &trans &trans &trans &trans                                                     &trans  &trans &trans &trans &trans &trans
