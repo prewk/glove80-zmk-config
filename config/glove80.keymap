@@ -43,7 +43,7 @@
 #define _PLUS  MINUS // +
 #define _DASH  SLASH // -
 #define _AT    LA(N2) // @
-#define _DOLLR LA(N4) // ${}
+#define _DOLLR LA(N4) // $
 #define _FSLSH LS(N7) // /
 #define _PIPE  LA(N7) // /
 #define _BSLSH LS(LA(N7)) // \
@@ -207,7 +207,7 @@
             bindings = <
  &trans  &trans &trans &trans &trans                                                                 &trans       &trans    &trans    &trans        &trans
  &trans  &trans &trans &trans &trans &trans                                                  &trans  &trans       &trans    &trans    &trans        &trans
- &trans  &trans &trans &trans &trans &trans                                                  &trans  &kp la(LEFT) &kp PG_DN &kp PG_UP &kp la(RIGHT) &trans
+ &trans  &trans &trans &trans &trans &trans                                                  &trans  &kp LA(LEFT) &kp PG_DN &kp PG_UP &kp LA(RIGHT) &trans
  &trans  &trans &trans &trans &trans &trans                                                  &trans  &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT     &trans
  &trans  &trans &trans &trans &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans    &trans    &trans        &trans
  &trans  &trans &trans &trans &trans         &trans  &trans  &trans  &trans  &trans  &trans          &trans       &trans    &trans    &trans        &trans
