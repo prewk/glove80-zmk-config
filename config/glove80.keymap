@@ -83,6 +83,32 @@
     };
 
     macros {
+        bcktk: backtick {
+            label = "BACKTICK";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LSHFT>,
+                <&macro_tap &kp EQUAL>,
+                <&macro_release &kp LSHFT>,
+                <&macro_tap &kp SPACE>;
+        };
+
+        bcktk3: triple_backtick {
+            label = "TRIPLE_BACKTICK";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LSHFT>,
+                <&macro_tap &kp EQUAL>,
+                <&macro_tap &kp EQUAL>,
+                <&macro_tap &kp EQUAL>,
+                <&macro_release &kp LSHFT>,
+                <&macro_tap &kp SPACE>;
+        };
+
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
