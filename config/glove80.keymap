@@ -170,14 +170,42 @@
             >;
         };
 
+    /*
+                                                              _NAV
+                ┌─────┬─────┬─────┐                                                                                                               ┌─────┬─────┬─────┐
+    ┌─────┬─────┤     │     │     │                                                                                                               │     │     │     ├─────┬─────┐
+    │     │     │     │     │     │                                                                                                               │     │     │     │     │     │
+    │     │     ├─────┼─────┼─────┼─────┐                                                                                                   ┌─────┼─────┼─────┼─────┤     │     │
+    ├─────┼─────┤     │     │     │     │                                                                                                   │     │     │     │     ├─────┼─────┤
+    │     │     │     │     │     │     │                                                                                                   │     │     │     │     │     │     │
+    │     │     ├─────┼─────┼─────┼─────┤                                                                                                   ├─────┼─────┼─────┼─────┤     │     │
+    ├─────┼─────┤  ]  │  }  │  )  │     │                                                                                                   │     │ <<  │PgDwn│PgUp ├─────┼─────┤
+    │     │  >  │     │     │     │     │                                                                                                   │     │     │     │     │ >>  │     │
+    │     │     ├─────┼─────┼─────┼─────┤                                                                                                   ├─────┼─────┼─────┼─────┤     │     │
+    ├─────┼─────┤  [  │  {  │  (  │     │                                                                                                   │     │Left │Down │ Up  ├─────┼─────┤
+    │     │  <  │     │     │     │     │                                                                                                   │     │     │     │     │Right│     │
+    │     │     ├─────┼─────┼─────┼─────┤                                                                                                   ├─────┼─────┼─────┼─────┤     │     │
+    ├─────┼─────┤Cmd+X│Cmd+C│Cmd+V│     │             ┌─────┐                                                           ┌─────┐             │     │     │     │     ├─────┼─────┤
+    │     │Cmd+Z│     │     │     │     │             │     │┌─────┐                                             ┌─────┐│     │             │     │     │     │     │     │     │
+    │     │     ├─────┼─────┼─────┼─────┘             │     ││     │┌─────┐                               ┌─────┐│     ││     │             └─────┼─────┼─────┼─────┤     │     │
+    ├─────┼─────┤     │     │     │                   └─────┘│     ││     │                               │     ││     │└─────┘                   │     │     │     ├─────┼─────┤
+    │     │     │     │     │     │                ┌─────┐   └─────┘│     │                               │     │└─────┘   ┌─────┐                │     │     │     │     │     │
+    │     │     ├─────┴─────┴─────┘                │     │┌─────┐   └─────┘                               └─────┘   ┌─────┐│     │                └─────┴─────┴─────┤     │     │
+    └─────┴─────┘                                  │     ││     │┌─────┐                                     ┌─────┐│     ││     │                                  └─────┴─────┘
+                                                   └─────┘│     ││  [  │                                     │  ]  ││     │└─────┘
+                                                          └─────┘│     │                                     │     │└─────┘
+                                                                 └─────┘                                     └─────┘
+    */
+
+
         layer_nav {
             bindings = <
-            &none        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &none
-            &none             &none               &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
-            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &none      &none      &none      &none      &none      &none
-            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
-            &sys_reset        &none               &none           &none           &none           &none           &none     &none     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
-            &none             &none               &none           &none           &none                           &none     &none     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &to FACTORY_TEST
+ &trans  &trans     &trans     &trans     &trans                                                                    &trans       &trans    &trans    &trans        &trans
+ &trans  &trans     &trans     &trans     &trans     &trans                                                  &trans &trans       &trans    &trans    &trans        &trans
+ &trans  &kp _ANG_R &kp _SQR_R &kp _CRL_R &kp _PAR_R &trans                                                  &trans &kp LA(LEFT) &kp PG_DN &kp PG_UP &kp LA(RIGHT) &trans
+ &trans  &kp _ANG_L &kp _SQR_L &kp _CRL_L &kp _PAR_L &trans                                                  &trans &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT     &trans
+ &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans &trans  &trans  &trans      &trans      &trans  &trans  &trans       &trans    &trans    &trans        &trans &trans
+ &trans  &trans     &trans     &trans     &trans            &trans  &trans  &kp _SQR_L  &kp _SQR_R  &trans  &trans               &trans    &trans    &trans        &trans &trans
             >;
         };
 
