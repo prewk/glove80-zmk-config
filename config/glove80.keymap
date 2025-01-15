@@ -87,56 +87,12 @@
                 <&macro_release &kp LSHFT>,
                 <&macro_tap &kp SPACE>;
         };
-
-        rgb_ug_status_macro: rgb_ug_status_macro_0 {
-            label = "RGB_UG_STATUS";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&rgb_ug RGB_STATUS>;
-        };
-
-        bt_0: bt_profile_macro_0 {
-            label = "BT_0";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 0>;
-        };
-
-        bt_1: bt_profile_macro_1 {
-            label = "BT_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 1>;
-        };
-
-        bt_2: bt_profile_macro_2 {
-            label = "BT_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 2>;
-        };
-
-        bt_3: bt_profile_macro_3 {
-            label = "BT_3";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 3>;
-        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        layer_qwerty {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
             // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
@@ -155,7 +111,7 @@
             >;
         };
 
-        lower_layer {
+        layer_symb {
             bindings = <
             &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &none           &kp PAUSE_BREAK
             &trans            &none               &none           &none           &none           &kp HOME                                                                              &kp LPAR     &kp KP_NUM   &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp PSCRN
@@ -166,18 +122,18 @@
             >;
         };
 
-        magic_layer {
+        layer_nav {
             bindings = <
-            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &bt BT_CLR_ALL
+            &none        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &none
             &none             &none               &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
             &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &none      &none      &none      &none      &none      &none
             &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
-            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
-            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &to FACTORY_TEST
+            &sys_reset        &none               &none           &none           &none           &none           &none     &none     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
+            &none             &none               &none           &none           &none                           &none     &none     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &to FACTORY_TEST
             >;
         };
 
-        factory_test_layer {
+        layer_num {
             bindings = <
             &kp N0   &kp N6   &kp N2   &kp N8   &kp N4                                                                              &kp N4   &kp N8   &kp N2   &kp N6   &kp N0
             &kp N1   &kp N7   &kp N3   &kp N9   &kp N5   &kp N0                                                            &kp N0   &kp N5   &kp N9   &kp N3   &kp N7   &kp N1
