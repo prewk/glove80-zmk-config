@@ -87,6 +87,113 @@
                 <&macro_release &kp LSHFT>,
                 <&macro_tap &kp SPACE>;
         };
+
+        tmux: tumux_command {
+            label = "TMUX_COMMAND";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LCTRL>;
+        };
+
+        tmuxp: tumux_window_prev {
+            label = "TMUX_WINDOW_PREV";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LCTRL>,
+                <&macro_tap &kp P>;
+        };
+
+        tmuxn: tumux_window_next {
+            label = "TMUX_WINDOW_NEXT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LCTRL>,
+                <&macro_tap &kp N>;
+        };
+
+        tmux0: tumux_window_0 {
+            label = "TMUX_WINDOW_0";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LCTRL>,
+                <&macro_tap &kp N0>;
+        };
+
+        tmux1: tumux_window_1 {
+            label = "TMUX_WINDOW_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LCTRL>,
+                <&macro_tap &kp N1>;
+        };
+
+        tmux2: tumux_window_2 {
+            label = "TMUX_WINDOW_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LCTRL>,
+                <&macro_tap &kp N2>;
+        };
+
+        tmux3: tumux_window_3 {
+            label = "TMUX_WINDOW_3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LCTRL>,
+                <&macro_tap &kp N3>;
+        };
+
+        tmux4: tumux_window_4 {
+            label = "TMUX_WINDOW_4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LCTRL>,
+                <&macro_tap &kp N4>;
+        };
+
+        tmux5: tumux_window_5 {
+            label = "TMUX_WINDOW_5";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp B>,
+                <&macro_release &kp LCTRL>,
+                <&macro_tap &kp N5>;
+        };
     };
 
     keymap {
@@ -122,11 +229,11 @@
 
         layer_qwerty {
             bindings = <
- &kp _QUAKE       &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4)                                                                                                      &kp LG(N5) &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp F10
+ &kp _QUAKE       &tmux0     &tmux1     &tmux2     &tmux3                                                                                                          &kp LG(N5) &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp F10
  &kp _SNGQU       &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                                                                                               &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp _PLUS
  &lt L_NUM TAB    &kp Q      &kp W      &kp E      &kp R      &kp T                                                                                                &kp Y      &kp U      &kp I      &kp O      &kp P      &kp _SV_AU
  &kp ESC          &kp A      &kp S      &kp D      &kp F      &kp G                                                                                                &kp H      &kp J      &kp K      &kp L      &kp _SV_OE &kp _SV_AE
- &kp LSHIFT       &kp Z      &kp X      &kp C      &kp V      &kp B  &kp DEL         &none            &none            &none      &none            &none           &kp N      &kp M      &kp COMMA  &kp DOT    &kp _DASH  &kp RSHIFT
+ &kp LSHIFT       &kp Z      &kp X      &kp C      &kp V      &kp B  &kp DEL         &tmux            &tmuxp           &tmuxn     &tmux            &none           &kp N      &kp M      &kp COMMA  &kp DOT    &kp _DASH  &kp RSHIFT
  &kp LCTRL        &kp LCTRL  &kp LCTRL  &kp LALT   &kp LGUI          &lt L_NAV SPACE &lt L_SYMB ENTER &kp _PAR_L       &kp _PAR_R &lt L_SYMB ENTER &lt L_NAV SPACE &kp BSPC   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
             >;
         };
